@@ -1,24 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import { Buffer } from 'buffer';
+import process from 'process';
+import { Readable, Writable } from 'stream-browserify';
+import MusicPlayer from "./pages/musicPlayer";
+
+// Set these globally if needed
+window.Buffer = Buffer;
+window.process = process;
+window.Readable = Readable;
+window.Writable = Writable;
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <MusicPlayer />
+    </>
   );
 }
 
